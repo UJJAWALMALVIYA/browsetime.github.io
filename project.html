@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+      body{
+        background-image: url("word.png");
+      }
+    </style>
+    <script>
+        let a;
+        let time;
+        let date;
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        setInterval(() =>{
+
+        a= new Date();
+        date = a.toLocaleDateString(undefined,options);
+        time = a.getHours() +":"+a.getMinutes()+":"+a.getSeconds(); 
+        document.getElementById('time').innerHTML= time + " on "+ date;
+
+        },1000);
+    </script>
+  </head>
+  <body>
+  <a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  countries
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="india.html">India</a>
+                  <a class="dropdown-item" href="america.html">America</a>
+                  <a class="dropdown-item" href="russia.html">Russia</a>
+                  <div class="dropdown-divider"></div>  
+                </div>
+              </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+      <div class="container:my-10"></div>
+      <div class="jumbotron">
+        <h1 class="display-4">current time Is:<span id="time"></span></h1>
+        <p class="lead">We have got you covered .This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>we are here to show you the times of dfferent country.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Browse Times
+            <select name="timezone_offset" id="timezone-offset" class="span5">
+                <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+                <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+                <option value="-10:00">(GMT -10:00) Hawaii</option>
+                <option value="-09:50">(GMT -9:30) Taiohae</option>
+                <option value="-09:00">(GMT -9:00) Alaska</option>
+                <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                <option value="-07:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                <option value="-06:00">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                <option value="-05:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                <option value="-04:50">(GMT -4:30) Caracas</option>
+                <option value="-04:00">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                <option value="-03:50">(GMT -3:30) Newfoundland</option>
+                <option value="-03:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                <option value="-02:00">(GMT -2:00) Mid-Atlantic</option>
+                <option value="-01:00">(GMT -1:00) Azores, Cape Verde Islands</option>
+                <option value="+00:00">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                <option value="+01:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
+                <option value="+02:00">(GMT +2:00) Kaliningrad, South Africa</option>
+                <option value="+03:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                <option value="+03:50">(GMT +3:30) Tehran</option>
+                <option value="+04:00">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                <option value="+04:50">(GMT +4:30) Kabul</option>
+                <option value="+05:00">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                <option value="+05:50">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                <option value="+05:75">(GMT +5:45) Kathmandu, Pokhara</option>
+                <option value="+06:00">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                <option value="+06:50">(GMT +6:30) Yangon, Mandalay</option>
+                <option value="+07:00">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                <option value="+08:00">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                <option value="+08:75">(GMT +8:45) Eucla</option>
+                <option value="+09:00">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                <option value="+09:50">(GMT +9:30) Adelaide, Darwin</option>
+                <option value="+10:00">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                <option value="+10:50">(GMT +10:30) Lord Howe Island</option>
+                <option value="+11:00">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                <option value="+11:50">(GMT +11:30) Norfolk Island</option>
+                <option value="+12:00">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                <option value="+12:75">(GMT +12:45) Chatham Islands</option>
+                <option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
+                <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
+            </select>
+        </a>
+      </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
